@@ -1,0 +1,16 @@
+#gridView{
+    color: white;
+    font-weight: bold;   
+    overflow-y: scroll;
+    overflow-x: scroll;
+    /* height: 50%; */
+   
+}
+th{
+    background-color: #7D3F98; 
+    }
+
+    
+/* th > span{ color:  #ffffff;} */
+
+ 

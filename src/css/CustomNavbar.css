@@ -1,0 +1,40 @@
+.navbar-brand {
+	display: flex;
+	align-items: center;
+	padding-left: 100px;
+	padding-right: 50px;
+	padding-top: 20px;
+	color: white;
+}
+
+.navbar-brand > li > a{	color: white;}
+
+.navbar-brand > li {list-style-type: none;}
+
+.navbar-brand-img {	
+	padding: 7px 14px;
+}
+
+.btn-default {
+	background-color: #7D3F98;
+}
+
+.btn-primary {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#7D3F98), to(#7D3F98));
+}
+
+.navbar-header {
+	background-color: #7D3F98;
+	color: white;
+	margin-left: 15px;
+	margin-right: 15px;
+	float: left;
+	width: 100%;
+	height: 50px;
+}
+
+
+
+.nav-item {
+	color: white
+}

@@ -1,0 +1,43 @@
+{
+    "memberInfo": {
+        "FIRSTNM": "TORY",
+        "LASTNM": "TESTER46",
+        "GENDER": "M",
+        "AHMSUPPLIERID": 14016,
+        "PRIMARYMEMBERPLANID": 1720874840,
+        "ORGNM": "Test PORT-Supplier 599",
+        "EFFECTIVESTARTDT": "1990-01-01T05:00:00.000Z",
+        "EFFECTIVEENDDT": null
+    },
+    "membershipInfo": {
+        "PRIMARYMEMBERPLANID": 1720874840,
+        "AHMSUPPLIERID": 14016,
+        "INSURANCEPLANID": 1,
+        "PLANGROUPID": "00701093",
+        "PLANMEMBERSHIPID ": "",
+        "EFFECTIVESTARTDT": "1990-01-01T05:00:00.000Z",
+        "EFFECTIVEENDDT": null,
+        "RECORDUPDTDT": "1990-01-01T05:00:00.000Z"
+    },
+    "dependentInfo": {
+        "MEMBERMEMBERSKEY": 1118584040,
+        "MEMBERID": 367002244,
+        "DEPENDENTMEMBERID": 367002244,
+        "DEPENDENTTYPE": "E",
+        "PLANMEMBERSHIPID": "",
+        "EFFECTIVESTARTDT": "1990-01-01T05:00:00.000Z",
+        "EFFECTIVEENDDT": null,
+        "RECORDUPDTDT": "1990-01-01T05:00:00.000Z"
+    },
+    "Enrollment": {
+        "AHMSUPPLIERID": 14016,
+        "CEPRODUCTMNEMONICCD": 367002244,
+        "EFFECTIVESTARTDT": "1990-01-01T05:00:00.000Z",
+        "EFFECTIVEENDDT": null,
+        "EXECUTIONMODECD": "1990-01-01T05:00:00.000Z",
+        "VBFPOPULATIONCD": "",
+        "EMPLOYEELIGIBILITYCD": "",
+        "CDPRODUCTSUBSCRIPTION": "",
+        "DATASHARECONSENTFLG": ""
+    }
+}

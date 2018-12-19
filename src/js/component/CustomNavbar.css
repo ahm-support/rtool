@@ -1,0 +1,17 @@
+.nav-tabs{
+    background: #39a33f;
+    width: 100%;
+}
+#navbar-header{
+    background-color: #7D3F98;
+}
+.control-label > h3 {
+    color: #7D3F98;
+   }
+  .navbar-brand > a
+  {
+      color: white;
+    }
+
+
+ 
