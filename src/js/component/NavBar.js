@@ -16,8 +16,10 @@ export default class NavBar extends React.Component {
             showNavItem: false
         }
     }
-
+    componentWillMount() {}
+    
     componentDidMount() {
+        console.log(this.state.memberPlanId);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -62,14 +64,14 @@ export default class NavBar extends React.Component {
                      </NavItem>
                     </Navbar.Brand>
                     <Navbar.Brand > {!this.props.isVisible &&
-                        <NavItem eventKey={2} href={"about"}>
-                            Health Assessment
-                     </NavItem>}
+                        <NavItem eventKey={2}><Link to={{ pathname: '/service', state: { memberPlanId: this.props.memberPlanId, name: 'healthAssessments' } }}>
+                            Health Assessment</Link>
+                        </NavItem>}
                     </Navbar.Brand>
                     <Navbar.Brand > {!this.props.isVisible &&
-                        <NavItem eventKey={3} href={"about"}>
-                            Health Action
-                     </NavItem>}
+                        <NavItem eventKey={3}><Link to={{ pathname: '/service', state: { memberPlanId: this.props.memberPlanId, name: 'monitoredEvents' } }}>
+                            Health Action</Link>
+                        </NavItem>}
                     </Navbar.Brand>
                     <Navbar.Brand > {!this.props.isVisible &&
                         <NavItem eventKey={4} href={"about"}>

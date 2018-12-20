@@ -24,8 +24,8 @@ export default class Member extends React.Component {
         super(props);
 
         this.state = {
-            result: [],
-            showSearchMain: true
+            result: []
+            //  showSearchMain: false
         }
     }
 
@@ -34,7 +34,6 @@ export default class Member extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-
         if (this.props.location.state != nextProps.location.state) {
             console.log(this.props.location.state + "Next" + nextProps.location.state);
             this.callApi(nextProps.location.state);
@@ -46,7 +45,8 @@ export default class Member extends React.Component {
     }
 
     callApi(memberPlanId) {
-        this.setState({ showSearchMain: true })
+        console.log('Membercomponent - memberPlanId' + memberPlanId);
+        // this.setState({ showSearchMain: true })
         console.log(this.state);
         //const restURL = `http://${Config.hostUrl}:${Config.port}${Config.mahServices.member}?app-id=${Config.appId}&q=${memberPlanId}`;
         //returnData('fetchData', restURL).then((data) => this.setState({result: data}));
@@ -54,18 +54,19 @@ export default class Member extends React.Component {
     }
 
     render() {
+        console.log('In Member before render');
         return (
 
             <div id="mainGrid">
                 <div className="nestedGrid">
                     <span><b>MEMBERDETAILS</b></span>
-                    <Facts res={this.state.result.memberInfo} className="body" />
+                    <Facts res={this.state.result.memberInfo} className="body" componentName="memberDetails" />
                 </div>
 
                 <br />
                 <div className="nestedGrid">
                     <span><b>MEMBERSHIP INFO</b></span>
-                    <Facts res={this.state.result.membershipInfo} className="body" /></div>
+                    <Facts res={this.state.result.membershipInfo} className="body" componentName="memberDetails" /></div>
                 <br />
 
                 <Collapsible trigger={
@@ -74,7 +75,7 @@ export default class Member extends React.Component {
                         <span className="glyphicon glyphicon-chevron-down" ></span>
                     </div>} className="nestedGrid" >
 
-                    <Facts res={this.state.result.dependentInfo} className="body" />
+                    <Facts res={this.state.result.dependentInfo} className="body" componentName="memberDetails" />
 
                 </Collapsible>
                 <br />
@@ -84,7 +85,7 @@ export default class Member extends React.Component {
                         <span className="glyphicon glyphicon-chevron-down" ></span>
                     </div>} className="nestedGrid" >
 
-                    <Facts res={this.state.result.Enrollment} className="body" />
+                    <Facts res={this.state.result.Enrollment} className="body" componentName="memberDetails" />
 
                 </Collapsible>
 

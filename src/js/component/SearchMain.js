@@ -16,7 +16,27 @@ class SearchMain extends React.Component {
         this.state = {
             memberPlanId: ''
         }
+
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+
+    componentDidMount() {
+        console.log("SearchMain - componentDidMount ");
+    }
+
+    componentWillReceiveProps() {
+        console.log("SearchMain - componentWillReceiveProps ");
+
+    }
+    componentDidUpdate() {
+        console.log(this.state.memberPlanId);
+        console.log("SearchMain - componentDidUpdate ");
+
+    };
+
+
+
     // handleSubmit(e) {
     //     const mId = this.state.memberPlanId;
     //     e.preventDefault();
@@ -27,7 +47,7 @@ class SearchMain extends React.Component {
         console.log('Inside SearchMain!!');
         return (
             <div>
-                <form onSubmit={(e) => this.props.handleSubmit(e)}>
+                <form onSubmit={(e, value) => this.props.handleSubmit(e, this.state)} >
                     <Grid>
                         <FormGroup controlId="formBasicText" >
                             <Row>
@@ -40,7 +60,7 @@ class SearchMain extends React.Component {
                                 <Col md="3">
                                 </Col>
                                 <Col md="5">
-                                    <FormControl type="text" name="search" placeholder="Enter here..." onChange={e => this.setState({ memberPlanId: e.target.value})} />
+                                    <FormControl type="text" name="search" placeholder="Enter here..." onChange={e => this.setState({ memberPlanId: e.target.value })} />
                                 </Col>
                             </Row>
                             <FormControl.Feedback />

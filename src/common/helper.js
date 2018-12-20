@@ -45,14 +45,14 @@ function returnData(urlName, url) {
 }
 
 function returnJson(componentName) {
-    console.log("From Helper Class" + componentName);
+    console.log('In Helper' + componentName);
     var jsonPath = getMockJsonfile(componentName);
-    console.log(jsonPath);
+   // console.log(jsonPath);
 
     return co(function* () {
-        console.log('Inside returnJson: ');
+        // console.log('Inside returnJson: ');
         var json = jsonPath;
-        console.log('Inside returnJson: ', json);
+        //  console.log('Inside returnJson: ', json);
         return json;
     }).catch(
         () => console.log("Can’t access " + componentName)

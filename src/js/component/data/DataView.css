@@ -1,16 +1,23 @@
-#gridView{
-    color: white;
-    font-weight: bold;   
-    overflow-y: scroll;
-    overflow-x: scroll;
-    /* height: 50%; */
-   
+#gridView {
+	/* color: white;
+	font-weight: bold;
+	overflow-y: scroll;
+	overflow-x: scroll;
+	height: 50%; */
+
+	overflow-y: auto;
+	width: auto;
+	display: flex;
+	flex-direction: column;
 }
-th{
-    background-color: #7D3F98; 
-    }
 
-    
+th {
+	background-color: #7D3F98;
+}
+
+#serviceMainGrid {
+	margin-left: 50px;
+}
+
+
 /* th > span{ color:  #ffffff;} */
-
- 

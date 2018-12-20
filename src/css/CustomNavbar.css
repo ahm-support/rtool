@@ -6,8 +6,10 @@
 	padding-top: 20px;
 	color: white;
 }
+.navbar{widows: 100px;}
 
 .navbar-brand > li > a{	color: white;}
+.navbar-brand > li > a>a{	color: white;}
 
 .navbar-brand > li {list-style-type: none;}
 
@@ -18,23 +20,25 @@
 .btn-default {
 	background-color: #7D3F98;
 }
-
 .btn-primary {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#7D3F98), to(#7D3F98));
 }
+.btn-primary:focus, .btn-primary:hover {
+    background-color: #7D3F98;
+    background-position: 0 -15px;
+}
 
+.container > .navbar-header{margin-right: 0;
+    margin-left: -15px;}
 .navbar-header {
 	background-color: #7D3F98;
 	color: white;
 	margin-left: 15px;
 	margin-right: 15px;
 	float: left;
-	width: 100%;
+	width: 1170px;
 	height: 50px;
 }
-
-
-
 .nav-item {
 	color: white
 }

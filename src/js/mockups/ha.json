@@ -1,18 +1,29 @@
-[
-    {
-        "Date": "2017-07-26T12:52:10",
-        "Title": "Have you been tested for hepatitis C?",
-        "Description": null,
-        "MeId": 1289,
-        "MeTrackingId": 14781030548,
-        "Severity": 3
+{
+   
+    "recommendha":{
+   
+     "ME TRACKING ID": 123456,
+     "MEID": 654321,
+     "TITLE": "Have you been tested for hepatitis C?",
+     "ME TYPE CODE": null,
+     "ME IMPACT FLAG": null,
+     "SEVERITY":3,
+     "ME CHANGE DT": null,
+     "CE STATUS": null,
+     "ME EXPIRY FLAG": null
+   
     },
-    {
-        "Date": "2017-07-26T12:52:10",
-        "Title": "Have you had a Tdap vaccine? ",
-        "Description": null,
-        "MeId": 1286,
-        "MeTrackingId": 14781030549,
-        "Severity": 3
+    "pasthealthaction":{
+   
+     "ME TRACKING ID": 123456,
+     "MEID": 654321,
+     "TITLE": "Have you had a Tdap vaccine? ",
+     "ME TYPE CODE": null,
+     "ME IMPACT FLAG": null,
+     "SEVERITY":null,
+     "ME CHANGE DT": null,
+     "CE STATUS": null,
+     "ME EXPIRY FLAG": null
+      
+       }
     }
-]

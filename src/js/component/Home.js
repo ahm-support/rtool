@@ -20,14 +20,13 @@ export default class Home extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-            memberPlanId: '',
             showSearchMain: false,
-            showNavItem: false
-        }
+            showNavItem: false,
+            memberPlanId: ''
+        };
     }
 
     componentDidMount() {
-        console.log(this.state.showSearchMain);
         this.changeNavItem(this.props.location.pathname);
         console.log(this.props.location.pathname);
     }
@@ -35,22 +34,34 @@ export default class Home extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (this.props.location.pathname !== nextProps.location.pathname) {
             this.changeNavItem(nextProps.location.pathname);
+
         }
     }
     componentDidUpdate() {
-        console.log('Changed showSearchMain value');
         console.log(this.state.showSearchMain);
+        console.log(this.state.showNavItem);
     };
 
-    handleSubmit(e) {
-        const mId = this.state.memberPlanId;
+    handleSubmit(e, stat) {
+        console.log('From child to Parent');
+        // const mId = this.state.memberPlanId;
+        const mId = stat.memberPlanId;
         e.preventDefault();
         this.setState({ showSearchMain: true });
-        this.props.history.push('/member', this.mId);
+        this.setState({ memberPlanId: mId });
+        //  console.log(mId);
+        //  console.log(this.state.showSearchMain);
+        //  console.log(this.state.memberPlanId);
+        this.props.history.push('/member', mId);
+
     };
 
     changeNavItem(currentRoute) {
-        if (currentRoute != "/member") {
+        console.log("currentRoute" + currentRoute);
+        if (currentRoute == "/service") {
+            this.setState({ showNavItem: false });
+        }
+        else if (currentRoute != "/member") {
             this.setState({ showNavItem: true });
         }
         else {
@@ -61,10 +72,11 @@ export default class Home extends React.Component {
     render() {
         console.log('Inside Home!!');
         const isVisible = this.state.showNavItem;
+        const memberPlanId = this.state.memberPlanId;
         return (
             <div>
                 <Grid>
-                    <Row><NavBar isVisible={isVisible} /></Row>
+                    <Row><NavBar isVisible={isVisible} memberPlanId={memberPlanId} /></Row>
                     <Row>
                         <hr />
                     </Row>

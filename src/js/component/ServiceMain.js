@@ -21,7 +21,8 @@ export default class ServiceMain extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            result: []
+            result: [],
+            currentcomponentName: ''
         }
     }
 
@@ -34,10 +35,11 @@ export default class ServiceMain extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         console.log('ServiceMain::', nextProps);
+        console.log(this.props);
 
         if (this.props.location.state != nextProps.location.state) {
             console.log(this.props.location.state + "Next" + nextProps.location.state);
-            this.callApi(componentName, memberPlanId);
+            this.callApi(nextProps.location.state.name, nextProps.location.state.memberPlanId);
         }
     }
 
@@ -53,14 +55,14 @@ export default class ServiceMain extends React.Component {
 
         //To work with mock json
         console.log("Component name" + componentName);
-        returnJson(componentName).then((data) => this.setState({ result: data }));
+        returnJson(componentName).then((data) => this.setState({ result: data, currentcomponentName: componentName }));
     }
 
     render() {
         return (
-            <div>
+            <div id="serviceMainGrid">
                 <hr />
-                <Facts res={this.state.result} className="body" />
+                <Facts res={this.state.result} className="body" componentName={this.state.currentcomponentName} />
             </div>
         )
     }

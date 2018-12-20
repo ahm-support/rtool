@@ -8,17 +8,24 @@
 div>span {
 	color: #7D3F98;
 }
+
 #mainGrid {
-    margin-left: 50px;
-} 
-
-
- #left{ float: left;}
-#right{float: right; margin-right: 100px;
+	margin-left: 50px;
 }
-.Collapsible__contentInner{bottom:0px;
+
+#left {
+	float: left;
+}
+
+#right {
+	float: right;
+	margin-right: 100px;
+}
+
+.Collapsible__contentInner {
+	bottom: 0px;
 	overflow-y: auto;
 	width: auto;
 	display: flex;
 	flex-direction: column;
-} 
+}
