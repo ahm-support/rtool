@@ -10,6 +10,7 @@ import Home from '../js/component/Home';
 import ServiceMain from '../js/component/ServiceMain';
 import About from '../js/component/About';
 import MemberDelegate from '../js/component/MemberDelegate';
+import HealthCheck from '../js/component/HealthCheck';
 import App from '../js/App.jsx';
 
 const routes = [
@@ -18,7 +19,8 @@ const routes = [
     { path: '/member',  component:Member },
     { path: '/service',  component:ServiceMain },
     { path: '/news',  component:News },
-    { path: '/memberDetails',  component:MemberDelegate }
+    { path: '/memberDetails',  component:MemberDelegate },
+    { path: '/healthCheck',  component:HealthCheck }
 ];
 
 

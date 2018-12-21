@@ -13,8 +13,7 @@ import '../data/DataView.css';
 export default function DataView(props) {
     var data = [];
     data = props.res;
-    console.log('@@@@@@@@@@@@@@@@');
-    console.log(props);
+    console.log(props.res);
     var componentName = props.componentName;
     console.log(props.componentName);
     //console.log("Rajeev1 Here...", props.res);

@@ -16,8 +16,8 @@ export default class NavBar extends React.Component {
             showNavItem: false
         }
     }
-    componentWillMount() {}
-    
+    componentWillMount() { }
+
     componentDidMount() {
         console.log(this.state.memberPlanId);
     }
@@ -78,6 +78,7 @@ export default class NavBar extends React.Component {
                             Digital Coaching
                      </NavItem>}
                     </Navbar.Brand>
+
                     <Navbar.Brand >{this.props.isVisible &&
                         <NavItem eventKey={5} href={"about"}>
                             About
@@ -91,7 +92,13 @@ export default class NavBar extends React.Component {
                             <MenuItem eventKey={7.3} href={"about"}>Dev</MenuItem>
                         </NavDropdown>}
                     </Navbar.Brand>
+                    <Navbar.Brand > {this.props.isVisible &&
+                        <NavItem eventKey={8}>
+                            <Link to={{ pathname: '/healthCheck', state: { memberPlanId: this.props.memberPlanId, name: 'HealthCheck' } }}>
+                                Health Check </Link>
 
+                        </NavItem>}
+                    </Navbar.Brand>
                 </Navbar.Header>
                 {/* <Nav pullRight>
                     <NavItem eventKey={1} href={"about"}>

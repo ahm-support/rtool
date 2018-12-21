@@ -36,6 +36,7 @@ function returnData(urlName, url) {
         console.log('Inside returnData: ');
         var res = yield fetch(url, options);
         console.log('Inside returnData res: ', res);
+        console.log('Inside returnData res: ', res.ok);
         var json = yield res.json();
         console.log('Inside returnData: ', json);
         return json;
@@ -47,7 +48,7 @@ function returnData(urlName, url) {
 function returnJson(componentName) {
     console.log('In Helper' + componentName);
     var jsonPath = getMockJsonfile(componentName);
-   // console.log(jsonPath);
+    // console.log(jsonPath);
 
     return co(function* () {
         // console.log('Inside returnJson: ');
@@ -69,6 +70,8 @@ function getMockJsonfile(componentName) {
         case 'monitoredEvents':
             return require('../js/mockups/ha.json');
         case 'MemberDetails':
+            return require('../js/mockups/member.json');
+        case 'healthCheck':
             return require('../js/mockups/member.json');
     }
 

@@ -61,6 +61,10 @@ export default class Home extends React.Component {
         if (currentRoute == "/service") {
             this.setState({ showNavItem: false });
         }
+        else if (currentRoute == "/healthCheck") {
+            this.setState({ showNavItem: true });
+            this.setState({ showSearchMain: true });
+        }
         else if (currentRoute != "/member") {
             this.setState({ showNavItem: true });
         }
